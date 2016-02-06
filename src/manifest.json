@@ -1,0 +1,17 @@
+{
+    "manifest_version" : 2
+,   "name" : "Chrome拡張機能メッセージ送受信サンプル"
+,   "version" : "0.0.1.0"
+,   "content_scripts" : [
+        {
+            "matches" :  [ "*://www.google.co.jp/*" ]
+        ,   "js" : [ "js/main.js" ]
+        }
+    ]
+,   "permissions" : [ "tabs" ]
+,   "background" : {
+        "scripts" : [ "js/background.js" ]
+    ,   "persistent": false
+    }
+,   "options_page" : "html/options.html"
+}
