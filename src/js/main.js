@@ -34,13 +34,13 @@ function initialize() {
         
         switch ( type ) {
             case 'OPTIONS_UPDATE_NOTIFICATION':
+                log( 'Message received:', type, sender );
                 // 変更通知により、オプションを更新
                 update_options();
-                log( 'Message received:', type );
                 response.result = 'OK';
                 break;
             default:
-                log( 'Unknown message type:', type );
+                log( 'Unknown message type:', type, sender );
                 response.result = 'NG';
                 break;
         }
